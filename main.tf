@@ -12,10 +12,10 @@ provider "github" {
   token        = var.github_token
 }
 
-resource "github_repository" "demo-1" {
-  name             = "demo-1"
+resource "github_repository" "demo2" {
+  name             = var.repo_name
   description      = "A demo GitHub repository created by Terraform"
-  visibility       = "public"
+  visibility       = var.visibility_type
   # homepage_url     = "https://apoti.tech/"
   has_projects     = false
   has_wiki         = false
